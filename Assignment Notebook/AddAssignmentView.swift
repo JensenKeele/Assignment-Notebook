@@ -21,9 +21,9 @@ struct AddAssignmentView: View {
                     ForEach(Self.courses, id: \.self) { course in
                         Text(course)
                     }
-                    TextField("Description", text: $description)
-                    DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
                 }
+                TextField("Description", text: $description)
+                DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
             }
             .navigationBarTitle("Add New Assignment", displayMode: .inline)
             .navigationBarItems(trailing: Button("Save") {
